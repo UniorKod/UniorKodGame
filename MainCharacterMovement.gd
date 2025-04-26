@@ -8,12 +8,26 @@ func _physics_process(delta: float) -> void:
 	var direction = Vector2.ZERO
 	if Input.is_action_pressed("move_left"):
 		direction.x -= 1
+		$MainCharacterAnimation.flip_h= true
+		$MainCharacterAnimation.play()
 	if Input.is_action_pressed("move_rigth"):
+		$MainCharacterAnimation.flip_h= false
+		$MainCharacterAnimation.play()
 		direction.x += 1
 	if Input.is_action_pressed("move_up"):
+		$MainCharacterAnimation.play()
 		direction.y -= 1
 	if Input.is_action_pressed("move_down"):
+		$MainCharacterAnimation.play()
 		direction.y += 1
+	if Input.is_action_just_released("move_left"):
+		$MainCharacterAnimation.stop()
+	if Input.is_action_just_released("move_rigth"):
+		$MainCharacterAnimation.stop()
+	if Input.is_action_just_released("move_up"):
+		$MainCharacterAnimation.stop()
+	if Input.is_action_just_released("move_down"):
+		$MainCharacterAnimation.stop()
 	# Add the gravity.
 	if direction.length() > 0:
 		direction = direction.normalized()
