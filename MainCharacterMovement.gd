@@ -11,7 +11,7 @@ func _physics_process(delta: float) -> void:
 		direction.x -= 1
 	if Input.is_action_pressed("move_rigth"):
 		direction.x += 1
-	if Input.is_action_pressed("move_up") and $".".position.y > :
+	if Input.is_action_pressed("move_up"):
 		direction.y -= 1
 	if Input.is_action_pressed("move_down"):
 		direction.y += 1
