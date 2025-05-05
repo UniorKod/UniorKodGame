@@ -1,7 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://bqyu5p17kcmmh"]
+[gd_scene load_steps=12 format=3 uid="uid://bqyu5p17kcmmh"]
 
 [ext_resource type="Script" path="res://MainCharacterMovement.gd" id="2_8rfqy"]
 [ext_resource type="Texture2D" uid="uid://bnyrufpiqqdcs" path="res://models/WhatsApp_2025-04-26_15.42.01_e8a1d280.jpg" id="2_enkrs"]
+[ext_resource type="Script" path="res://progress_bar.gd" id="2_l6mq2"]
+[ext_resource type="Texture2D" uid="uid://cxl6tpj18lux0" path="res://бык.jpeg" id="4_604pd"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2jkc8"]
 atlas = ExtResource("2_enkrs")
@@ -60,13 +62,14 @@ position = Vector2(399, 330)
 script = ExtResource("2_8rfqy")
 
 [node name="ProgressBar" type="ProgressBar" parent="CharacterBody2D"]
-offset_left = -107.0
-offset_top = -114.0
-offset_right = 109.0
-offset_bottom = -87.0
+offset_left = -105.0
+offset_top = -147.0
+offset_right = 111.0
+offset_bottom = -120.0
+script = ExtResource("2_l6mq2")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CharacterBody2D"]
-polygon = PackedVector2Array(-10, -41, 4, -41, 17, -36, 24, -31, 28, -26, 34, -16, 35, -12, 36, -13, 36, -17, 42, -19, 47, -15, 44, -9, 41, -5, 35, -2, 33, 7, 29, 14, 21, 21, 13, 25, 16, 30, 19, 29, 24, 27, 26, 27, 26, 29, 25, 31, 12, 40, 9, 39, 8, 35, 2, 35, 5, 31, 5, 28, -6, 28, -8, 34, -15, 34, -20, 32, -25, 30, -27, 39, -31, 39, -32, 36, -28, 24, -17, 27, -17, 26, -34, 16, -35, 21, -37, 19, -39, 22, -42, 20, -43, 19, -45, 18, -42, 13, -42, 6, -43, 1, -41, -1, -41, -13, -32, -29, -23, -36, -18, -38, -22, -39, -14, -41, -17, -42, -15, -48, -7, -52, 3, -56, 11, -55, 13, -54, 7, -50, 2, -51, 5, -49, -8, -44, -10, -42)
+polygon = PackedVector2Array(-10, -41, 4, -41, 17, -36, 24, -31, 28, -26, 34, -16, 35, -12, 36, -13, 36, -17, 42, -19, 47, -15, 44, -9, 41, -5, 35, -2, 33, 7, 29, 14, 21, 21, 13, 25, 16, 30, 19, 29, 24, 27, 26, 27, 26, 29, 25, 31, 12, 40, 9, 39, 8, 35, 2, 35, 5, 31, 5, 28, -6, 28, -8, 34, -15, 34, -20, 32, -25, 30, -27, 39, -31, 39, -32, 36, -28, 24, -17, 27, -17, 26, -34, 16, -35, 21, -37, 19, -39, 22, -42, 20, -43, 19, -45, 18, -42, 13, -42, 6, -43, 1, -41, -1, -41, -13, -33, -31, -23, -36, -18, -38, -22, -39, -14, -41, -17, -42, -15, -48, -6, -49, 2, -47, 5, -41, 0, -42, 8, -43, -7, -46, -3, -43, -8, -44, -10, -42)
 
 [node name="MainCharacterAnimation" type="AnimatedSprite2D" parent="CharacterBody2D"]
 position = Vector2(-5, -11)
@@ -78,3 +81,8 @@ frame_progress = 0.776737
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 position = Vector2(-399, -331)
 enabled = false
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(967.25, 257.5)
+scale = Vector2(0.325683, 0.293945)
+texture = ExtResource("4_604pd")
