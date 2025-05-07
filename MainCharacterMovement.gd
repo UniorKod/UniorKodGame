@@ -3,8 +3,17 @@ extends CharacterBody2D
 const acceleration = 200.0
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
+var HEAVE = 100.0
 
 func _physics_process(delta: float) -> void:
+	for i in get_slide_collision_count():
+		var collision = get_slide_collision(i)
+		if collision.get_collider().name == "CharacterBody2D2":
+			HEAVE -= 20
+			print("Здоровье: ", HEAVE)
+			if HEAVE <= 0:
+				queue_free()
+	
 	var direction = Vector2.ZERO
 	if Input.is_action_pressed("move_left"):
 		direction.x -= 1
