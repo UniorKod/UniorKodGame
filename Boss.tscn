@@ -1,9 +1,9 @@
 [gd_scene load_steps=9 format=3 uid="uid://qu31bql6tcic"]
 
 [ext_resource type="Script" path="res://enemy.gd" id="1_yo0bn"]
-[ext_resource type="Texture2D" uid="uid://dh52thfdbmfka" path="res://models/Robot_Dark_1.png" id="2_fd33b"]
-[ext_resource type="Texture2D" uid="uid://uav4op04vu53" path="res://models/Robot_Dark_2.png" id="3_fkcs2"]
-[ext_resource type="Texture2D" uid="uid://c2x2wbhex5wkv" path="res://models/Robot_Dark_3.png" id="4_tevwq"]
+[ext_resource type="Texture2D" uid="uid://dui35gsng1txc" path="res://models/Robot_Dark_1.png" id="2_fd33b"]
+[ext_resource type="Texture2D" uid="uid://bp3c8k82xhily" path="res://models/Robot_Dark_2.png" id="3_fkcs2"]
+[ext_resource type="Texture2D" uid="uid://crhtej2dymron" path="res://models/Robot_Dark_3.png" id="4_tevwq"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wsi7x"]
 atlas = ExtResource("2_fd33b")
@@ -35,6 +35,7 @@ animations = [{
 }]
 
 [node name="Node2D" type="Node2D"]
+position = Vector2(214, 85)
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 script = ExtResource("1_yo0bn")
@@ -44,6 +45,7 @@ offset_left = -127.0
 offset_top = -189.0
 offset_right = 122.0
 offset_bottom = -162.0
+metadata/_edit_use_anchors_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
 position = Vector2(1, -32)

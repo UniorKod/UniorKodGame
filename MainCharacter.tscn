@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bqyu5p17kcmmh"]
+[gd_scene load_steps=14 format=3 uid="uid://cvbqa7c5emuo"]
 
 [ext_resource type="Script" path="res://MainCharacterMovement.gd" id="2_8rfqy"]
 [ext_resource type="Script" path="res://progress_bar.gd" id="2_l6mq2"]
@@ -53,27 +53,27 @@ animations = [{
 
 [node name="Node2D" type="Node2D"]
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+[node name="Главный" type="CharacterBody2D" parent="."]
 position = Vector2(-709, 580)
 script = ExtResource("2_8rfqy")
 
-[node name="ProgressBar" type="ProgressBar" parent="CharacterBody2D"]
+[node name="ProgressBar" type="ProgressBar" parent="Главный"]
 offset_left = 680.0
 offset_top = -163.0
 offset_right = 896.0
 offset_bottom = -136.0
 script = ExtResource("2_l6mq2")
 
-[node name="MainCharacterAnimation" type="AnimatedSprite2D" parent="CharacterBody2D"]
+[node name="MainCharacterAnimation" type="AnimatedSprite2D" parent="Главный"]
 position = Vector2(788, -24.4)
 scale = Vector2(0.233839, 0.189171)
 sprite_frames = SubResource("SpriteFrames_jdlax")
 frame_progress = 0.776737
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CharacterBody2D"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Главный"]
 position = Vector2(793, -13.4)
 polygon = PackedVector2Array(-3, -92, -7, -91, -12, -90, -20, -87, -26, -80, -29, -74, -29, -56, -52, -38, -55, 17, -53, 20, -49, 22, -45, 20, -42, 19, -32, -17, -29, -24, -29, 13, -28, 18, -38, 39, -26, 65, -24, 68, -21, 69, -17, 70, -14, 68, -12, 66, 7, 66, 8, 67, 11, 69, 16, 69, 20, 67, 21, 65, 34, 42, 22, 22, 22, -29, 31, 17, 33, 21, 39, 22, 44, 19, 45, 17, 42, -42, 22, -57, 22, -74, 18, -83, 13, -87, 4, -91)
 
-[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+[node name="Camera2D" type="Camera2D" parent="Главный"]
 position = Vector2(1285, -251)
 enabled = false
