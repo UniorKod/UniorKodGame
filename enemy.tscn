@@ -1,0 +1,50 @@
+[gd_scene load_steps=8 format=3 uid="uid://c0u7fdtf200f0"]
+
+[ext_resource type="Script" path="res://enemy.gd" id="1_aitwf"]
+[ext_resource type="Texture2D" uid="uid://dn4gsqhy8cwy0" path="res://models/Cheb_Blue_1.png" id="2_6k8s6"]
+[ext_resource type="Texture2D" uid="uid://53hqy1e5qrfv" path="res://models/Cheb_Blue_2.png" id="3_tq2xu"]
+[ext_resource type="Texture2D" uid="uid://di8yopr2xiv5t" path="res://models/Cheb_Blue_3.png" id="4_5wfny"]
+[ext_resource type="Texture2D" uid="uid://dxbbw2khfdt6w" path="res://models/Cheb_Blue_4.png" id="5_oi6fd"]
+[ext_resource type="Texture2D" uid="uid://bl5mmp7barq5i" path="res://models/Cheb_Blue_5.png" id="6_k0nwi"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g1h31"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_6k8s6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_tq2xu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_5wfny")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_oi6fd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_k0nwi")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Враг1" type="Node2D"]
+
+[node name="Враг2" type="CharacterBody2D" parent="."]
+position = Vector2(-534, 52)
+script = ExtResource("1_aitwf")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Враг2"]
+position = Vector2(1141, -165)
+rotation = -2.46861
+scale = Vector2(1.01276, -1.1754)
+polygon = PackedVector2Array(353.422, 595.248, 347.301, 618.244, 291.214, 715.722, 284.299, 727.292, 273.366, 735.015, 269.841, 745.65, 259.993, 756.294, 247.359, 761.761, 231.95, 767.497, 197.742, 779.906, 199.633, 799.701, 198.424, 811.926, 192.739, 822.166, 181.963, 831.084, 174.264, 836.677, 161.944, 844.535, 145.931, 856.384, 128.049, 859.334, 114.62, 853.376, 100.857, 834.13, 94.7022, 840.783, 82.6839, 845.585, 73.7429, 847.06, 29.6091, 831.98, 18.6429, 823.36, -151.849, 701.91, -157.622, 668.569, -158.752, 643.857, -147.372, 628.826, -46.7271, 603.295, -54.0561, 563.446, -48.1358, 517.464, -5.18753, 480.594, 17.3048, 469.931, 67.1345, 480.219, 101.601, 442.964, 112.69, 436.436, 130.885, 435.877, 311.56, 559.969, 338.438, 582.781)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Враг2"]
+position = Vector2(590.14, 367.324)
+scale = Vector2(0.866707, 1.01817)
+sprite_frames = SubResource("SpriteFrames_g1h31")
+frame = 4
+frame_progress = 0.0316528
