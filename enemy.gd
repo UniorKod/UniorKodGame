@@ -22,7 +22,7 @@ func check_floor_status():
 	ray.queue_free()
 
 func _ready():
-	player = get_parent().get_node("CharacterBody2D")
+	player = get_tree().get_first_node_in_group("Главный")
 	fixed_y_position = position.y
 
 func _physics_process(delta):

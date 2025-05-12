@@ -1,0 +1,54 @@
+[gd_scene load_steps=9 format=3 uid="uid://qu31bql6tcic"]
+
+[ext_resource type="Script" path="res://enemy.gd" id="1_yo0bn"]
+[ext_resource type="Texture2D" uid="uid://dh52thfdbmfka" path="res://models/Robot_Dark_1.png" id="2_fd33b"]
+[ext_resource type="Texture2D" uid="uid://uav4op04vu53" path="res://models/Robot_Dark_2.png" id="3_fkcs2"]
+[ext_resource type="Texture2D" uid="uid://c2x2wbhex5wkv" path="res://models/Robot_Dark_3.png" id="4_tevwq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wsi7x"]
+atlas = ExtResource("2_fd33b")
+region = Rect2(0, 0, 247, 328)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o7tu1"]
+atlas = ExtResource("3_fkcs2")
+region = Rect2(0, 0, 232, 328)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3v5ra"]
+atlas = ExtResource("4_tevwq")
+region = Rect2(0, 0, 235, 327)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ldqlh"]
+animations = [{
+"frames": [{
+"duration": 0.7,
+"texture": SubResource("AtlasTexture_wsi7x")
+}, {
+"duration": 0.7,
+"texture": SubResource("AtlasTexture_o7tu1")
+}, {
+"duration": 0.7,
+"texture": SubResource("AtlasTexture_3v5ra")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("1_yo0bn")
+
+[node name="ProgressBar" type="ProgressBar" parent="CharacterBody2D"]
+offset_left = -127.0
+offset_top = -189.0
+offset_right = 122.0
+offset_bottom = -162.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+position = Vector2(1, -32)
+scale = Vector2(0.699393, 0.730183)
+sprite_frames = SubResource("SpriteFrames_ldqlh")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CharacterBody2D"]
+polygon = PackedVector2Array(-13, -68, -11, -126, -3, -126, -3, -139, -1, -140, 1, -140, 3, -139, 4, -137, 4, -126, 20, -126, 20, -138, 23, -140, 26, -140, 28, -134, 28, -126, 43, -126, 54, -145, 52, -148, 54, -151, 57, -151, 59, -149, 58, -146, 55, -144, 51, -126, 87, -126, 88, 17, 92, 47, 92, 89, -9, 87, -27, 79, -27, 59, 3, 22, -10, 20, -35, -25, -84, -33, -84, -71)
