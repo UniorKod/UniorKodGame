@@ -1,0 +1,69 @@
+[gd_scene load_steps=7 format=3 uid="uid://b0403fmwqhclh"]
+
+[ext_resource type="Texture2D" uid="uid://7qt4d6dbmxo" path="res://models/WhatsApp_2025-04-26_16.00.12_086f5d18.jpg" id="1_p53mk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_71aok"]
+size = Vector2(1152.5, 21)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_efgio"]
+size = Vector2(28.5, 656.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7yo77"]
+size = Vector2(17, 661)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1xxod"]
+size = Vector2(1168, 20)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4skyk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(574, 643)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(2, 3)
+shape = SubResource("RectangleShape2D_71aok")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2(-20, 303)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(10.25, 22.25)
+shape = SubResource("RectangleShape2D_efgio")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+position = Vector2(1155.5, 320.5)
+shape = SubResource("RectangleShape2D_7yo77")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
+position = Vector2(574, 0)
+shape = SubResource("RectangleShape2D_1xxod")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(1127, 512)
+scale = Vector2(0.27125, 0.293333)
+sprite_frames = SubResource("SpriteFrames_4skyk")
+frame = 1
+frame_progress = 0.468561
+
+[node name="WhatsApp2025-04-2616_00_12086f5d18" type="Sprite2D" parent="."]
+position = Vector2(569, 330)
+scale = Vector2(0.925934, 0.934146)
+texture = ExtResource("1_p53mk")

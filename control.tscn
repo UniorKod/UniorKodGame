@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://vgq58ka2depn"]
+
+[ext_resource type="Texture2D" uid="uid://csc6ua6lscwdx" path="res://models/123927f4a7b22a711f0b824924a17ef2954.jpeg" id="1_u2fqi"]
+[ext_resource type="Texture2D" uid="uid://hvxdbyg05xk0" path="res://models/236a386a22a811f08cf9467d166a5c60_1.jpeg" id="2_ugodv"]
+[ext_resource type="Script" path="res://button.gd" id="3_xlxan"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1152.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="123927f4a7b22a711f0b824924a17Ef2955" type="Sprite2D" parent="."]
+position = Vector2(-575.056, 325.944)
+scale = Vector2(-0.855811, 0.83999)
+texture = ExtResource("1_u2fqi")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = -678.0
+offset_top = 450.0
+offset_right = 674.0
+offset_bottom = 1226.0
+scale = Vector2(0.167188, 0.165195)
+icon = ExtResource("2_ugodv")
+script = ExtResource("3_xlxan")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
