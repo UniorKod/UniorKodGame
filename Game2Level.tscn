@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://bk6c8frf7jnb5"]
+
+[ext_resource type="PackedScene" uid="uid://dydrhjdwq2mb2" path="res://2level.tscn" id="1_p05ln"]
+[ext_resource type="PackedScene" path="res://ГлавныйГерой.tscn" id="2_k1sil"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Node2D" parent="." instance=ExtResource("1_p05ln")]
+position = Vector2(49, 734)
+scale = Vector2(0.4, 0.360002)
+
+[node name="Главный" parent="." instance=ExtResource("2_k1sil")]
+position = Vector2(75, 197)

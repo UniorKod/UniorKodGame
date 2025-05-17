@@ -1,32 +1,17 @@
-[gd_scene load_steps=6 format=3 uid="uid://cvbqa7c5emuo"]
+[gd_scene load_steps=6 format=3 uid="uid://qjx2xfywft2a"]
 
-[ext_resource type="Texture2D" uid="uid://7qt4d6dbmxo" path="res://models/WhatsApp_2025-04-26_16.00.12_086f5d18.jpg" id="1_t0bmt"]
-[ext_resource type="PackedScene" uid="uid://bo3phhu3kmngv" path="res://ГлавныйГерой.tscn" id="4_0ns6w"]
-[ext_resource type="PackedScene" uid="uid://qu31bql6tcic" path="res://Boss.tscn" id="8_5cufw"]
-[ext_resource type="PackedScene" uid="uid://bfalt0rpg812b" path="res://enemy.tscn" id="9_g43o2"]
-[ext_resource type="PackedScene" uid="uid://ou2h3motnly5" path="res://1level.tscn" id="10_mcu4v"]
+[ext_resource type="Texture2D" uid="uid://b0ohsit1w2now" path="res://models/фонУровня.jpg" id="1_r7r43"]
+[ext_resource type="PackedScene" path="res://ГлавныйГерой.tscn" id="4_0ns6w"]
+[ext_resource type="PackedScene" path="res://Boss.tscn" id="8_5cufw"]
+[ext_resource type="PackedScene" path="res://enemy.tscn" id="9_g43o2"]
+[ext_resource type="PackedScene" path="res://1level.tscn" id="10_mcu4v"]
 
 [node name="Node2D" type="Node2D"]
 
-[node name="WhatsApp2025-04-2616_00_12086f5d18" type="Sprite2D" parent="."]
-position = Vector2(1082, 243)
-scale = Vector2(1.67424, 1.21487)
-texture = ExtResource("1_t0bmt")
-
-[node name="WhatsApp2025-04-2616_00_12086f5d19" type="Sprite2D" parent="."]
-position = Vector2(3223, 246)
-scale = Vector2(1.67424, 1.21487)
-texture = ExtResource("1_t0bmt")
-
-[node name="WhatsApp2025-04-2616_00_12086f5d20" type="Sprite2D" parent="."]
-position = Vector2(5365, 60)
-scale = Vector2(1.67424, 1.21487)
-texture = ExtResource("1_t0bmt")
-
-[node name="WhatsApp2025-04-2616_00_12086f5d21" type="Sprite2D" parent="."]
-position = Vector2(7498, -397)
-scale = Vector2(1.67424, 1.21487)
-texture = ExtResource("1_t0bmt")
+[node name="ФонУровня" type="Sprite2D" parent="."]
+position = Vector2(4712, 53)
+scale = Vector2(7.33338, 9.83693)
+texture = ExtResource("1_r7r43")
 
 [node name="Главный" parent="." instance=ExtResource("4_0ns6w")]
 position = Vector2(-32, 109)
