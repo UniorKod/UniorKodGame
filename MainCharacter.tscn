@@ -1,79 +1,43 @@
-[gd_scene load_steps=14 format=3 uid="uid://cvbqa7c5emuo"]
+[gd_scene load_steps=6 format=3 uid="uid://cvbqa7c5emuo"]
 
-[ext_resource type="Script" path="res://MainCharacterMovement.gd" id="2_8rfqy"]
-[ext_resource type="Script" path="res://progress_bar.gd" id="2_l6mq2"]
-[ext_resource type="Texture2D" uid="uid://bg03cq5gb8qlv" path="res://models/Gall_1.png" id="3_vlckt"]
-[ext_resource type="Texture2D" uid="uid://xx2t4lf5l4dy" path="res://models/Gall_2.png" id="4_t61b8"]
-[ext_resource type="Texture2D" uid="uid://dgwt58vcyj0kq" path="res://models/Gall_3.png" id="5_jp467"]
-[ext_resource type="Texture2D" uid="uid://bq8tck6ls4hh2" path="res://models/Gall_4.png" id="6_23sy2"]
-[ext_resource type="Texture2D" uid="uid://dgw82di36dyrh" path="res://models/Gall_5.png" id="7_ykauo"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_jdsit"]
-atlas = ExtResource("3_vlckt")
-region = Rect2(0, 0, 429, 853)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_8kcr1"]
-atlas = ExtResource("7_ykauo")
-region = Rect2(0, 0, 598, 827)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_cid4m"]
-atlas = ExtResource("6_23sy2")
-region = Rect2(0, 0, 545, 845)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_3g6vl"]
-atlas = ExtResource("5_jp467")
-region = Rect2(0, 0, 396, 860)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_62ytg"]
-atlas = ExtResource("4_t61b8")
-region = Rect2(0, 0, 429, 853)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_jdlax"]
-animations = [{
-"frames": [{
-"duration": 0.7,
-"texture": SubResource("AtlasTexture_jdsit")
-}, {
-"duration": 0.7,
-"texture": SubResource("AtlasTexture_8kcr1")
-}, {
-"duration": 0.7,
-"texture": SubResource("AtlasTexture_cid4m")
-}, {
-"duration": 0.7,
-"texture": SubResource("AtlasTexture_3g6vl")
-}, {
-"duration": 0.7,
-"texture": SubResource("AtlasTexture_62ytg")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
+[ext_resource type="Texture2D" uid="uid://7qt4d6dbmxo" path="res://models/WhatsApp_2025-04-26_16.00.12_086f5d18.jpg" id="1_t0bmt"]
+[ext_resource type="PackedScene" uid="uid://bo3phhu3kmngv" path="res://ГлавныйГерой.tscn" id="4_0ns6w"]
+[ext_resource type="PackedScene" uid="uid://qu31bql6tcic" path="res://Boss.tscn" id="8_5cufw"]
+[ext_resource type="PackedScene" uid="uid://bfalt0rpg812b" path="res://enemy.tscn" id="9_g43o2"]
+[ext_resource type="PackedScene" uid="uid://ou2h3motnly5" path="res://1level.tscn" id="10_mcu4v"]
 
 [node name="Node2D" type="Node2D"]
 
-[node name="Главный" type="CharacterBody2D" parent="."]
-position = Vector2(-709, 580)
-script = ExtResource("2_8rfqy")
+[node name="WhatsApp2025-04-2616_00_12086f5d18" type="Sprite2D" parent="."]
+position = Vector2(1082, 243)
+scale = Vector2(1.67424, 1.21487)
+texture = ExtResource("1_t0bmt")
 
-[node name="ProgressBar" type="ProgressBar" parent="Главный"]
-offset_left = 680.0
-offset_top = -163.0
-offset_right = 896.0
-offset_bottom = -136.0
-script = ExtResource("2_l6mq2")
+[node name="WhatsApp2025-04-2616_00_12086f5d19" type="Sprite2D" parent="."]
+position = Vector2(3223, 246)
+scale = Vector2(1.67424, 1.21487)
+texture = ExtResource("1_t0bmt")
 
-[node name="MainCharacterAnimation" type="AnimatedSprite2D" parent="Главный"]
-position = Vector2(788, -24.4)
-scale = Vector2(0.233839, 0.189171)
-sprite_frames = SubResource("SpriteFrames_jdlax")
-frame_progress = 0.776737
+[node name="WhatsApp2025-04-2616_00_12086f5d20" type="Sprite2D" parent="."]
+position = Vector2(5365, 60)
+scale = Vector2(1.67424, 1.21487)
+texture = ExtResource("1_t0bmt")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Главный"]
-position = Vector2(793, -13.4)
-polygon = PackedVector2Array(-3, -92, -7, -91, -12, -90, -20, -87, -26, -80, -29, -74, -29, -56, -52, -38, -55, 17, -53, 20, -49, 22, -45, 20, -42, 19, -32, -17, -29, -24, -29, 13, -28, 18, -38, 39, -26, 65, -24, 68, -21, 69, -17, 70, -14, 68, -12, 66, 7, 66, 8, 67, 11, 69, 16, 69, 20, 67, 21, 65, 34, 42, 22, 22, 22, -29, 31, 17, 33, 21, 39, 22, 44, 19, 45, 17, 42, -42, 22, -57, 22, -74, 18, -83, 13, -87, 4, -91)
+[node name="WhatsApp2025-04-2616_00_12086f5d21" type="Sprite2D" parent="."]
+position = Vector2(7498, -397)
+scale = Vector2(1.67424, 1.21487)
+texture = ExtResource("1_t0bmt")
 
-[node name="Camera2D" type="Camera2D" parent="Главный"]
-position = Vector2(1285, -251)
-enabled = false
+[node name="Главный" parent="." instance=ExtResource("4_0ns6w")]
+position = Vector2(-32, 109)
+
+[node name="1Уровень" parent="." instance=ExtResource("10_mcu4v")]
+position = Vector2(10, -3814)
+scale = Vector2(8.17676, 7.6126)
+
+[node name="Node2D" parent="." instance=ExtResource("8_5cufw")]
+position = Vector2(8640, -183)
+scale = Vector2(2, 2.01218)
+
+[node name="Враг1" parent="." instance=ExtResource("9_g43o2")]
+position = Vector2(1208, 572)
