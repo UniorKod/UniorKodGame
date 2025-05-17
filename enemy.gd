@@ -44,8 +44,8 @@ func _physics_process(delta):
 	move_and_slide()
 func take_damage(damage: int, direction: Vector2):
 	velocity = direction.normalized()
-	vrag_heave -= 0.1
-	$ProgressBar.value = vrag_heave
+	vrag_heave -= damage
+	#$ProgressBar.value = vrag_heave
 	print("Здоровье врага: ", vrag_heave)
 	if vrag_heave <= 0:
 		queue_free()
