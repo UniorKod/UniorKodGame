@@ -1,50 +1,74 @@
-[gd_scene load_steps=14 format=3 uid="uid://bo3phhu3kmngv"]
+[gd_scene load_steps=20 format=3 uid="uid://bo3phhu3kmngv"]
 
 [ext_resource type="Script" path="res://MainCharacterMovement.gd" id="1_ibcr3"]
 [ext_resource type="Script" path="res://progress_bar.gd" id="2_eeh7h"]
-[ext_resource type="Texture2D" uid="uid://bg03cq5gb8qlv" path="res://models/Gall_1.png" id="3_t2klm"]
-[ext_resource type="Texture2D" uid="uid://dgw82di36dyrh" path="res://models/Gall_5.png" id="4_enehc"]
-[ext_resource type="Texture2D" uid="uid://bq8tck6ls4hh2" path="res://models/Gall_4.png" id="5_llvdt"]
-[ext_resource type="Texture2D" uid="uid://dgwt58vcyj0kq" path="res://models/Gall_3.png" id="6_jcqeu"]
-[ext_resource type="Texture2D" uid="uid://xx2t4lf5l4dy" path="res://models/Gall_2.png" id="7_e3d8o"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_jdsit"]
-atlas = ExtResource("3_t2klm")
-region = Rect2(0, 0, 429, 853)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_8kcr1"]
-atlas = ExtResource("4_enehc")
-region = Rect2(0, 0, 598, 827)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_cid4m"]
-atlas = ExtResource("5_llvdt")
-region = Rect2(0, 0, 545, 845)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_3g6vl"]
-atlas = ExtResource("6_jcqeu")
-region = Rect2(0, 0, 396, 860)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_62ytg"]
-atlas = ExtResource("7_e3d8o")
-region = Rect2(0, 0, 429, 853)
+[ext_resource type="Texture2D" uid="uid://b6jpoecim53g" path="res://models/1kadr-no-bg-preview (carve.photos).png" id="3_x66bp"]
+[ext_resource type="Texture2D" uid="uid://d0ft024nbe334" path="res://models/2kadr-no-bg-preview (carve.photos).png" id="4_08imj"]
+[ext_resource type="Texture2D" uid="uid://cs8hf32vbw4e2" path="res://models/3kadr-no-bg-preview (carve.photos).png" id="5_ti15j"]
+[ext_resource type="Texture2D" uid="uid://c1xmxr76nllf6" path="res://models/4kadr.png" id="6_aarxj"]
+[ext_resource type="Texture2D" uid="uid://b76wllesm1uqe" path="res://models/5kadr.png" id="7_sujkf"]
+[ext_resource type="Texture2D" uid="uid://bd7xqnuvea0xs" path="res://models/6kadr.png" id="8_c1ysb"]
+[ext_resource type="Texture2D" uid="uid://do0njasna1iyk" path="res://models/dg1-no-bg-preview (carve.photos).png" id="9_4p3sk"]
+[ext_resource type="Texture2D" uid="uid://bcgw7h6nama1c" path="res://models/dg2-no-bg-preview (carve.photos).png" id="10_74p3j"]
+[ext_resource type="Texture2D" uid="uid://clh4dihyyuqvi" path="res://models/dg3-no-bg-preview (carve.photos).png" id="11_2hpuu"]
+[ext_resource type="Texture2D" uid="uid://biuxk1s5u1v85" path="res://models/dg4-no-bg-preview (carve.photos).png" id="12_36ljo"]
+[ext_resource type="Texture2D" uid="uid://be8f1p2cyfv8e" path="res://models/dg5-no-bg-preview (carve.photos).png" id="13_v1yhm"]
+[ext_resource type="Texture2D" uid="uid://c1tpyohantnmo" path="res://models/Gall_1-no-bg-preview (carve.photos).png" id="14_vcat3"]
+[ext_resource type="Texture2D" uid="uid://dhhqljep84c21" path="res://models/Gall_2-no-bg-preview (carve.photos).png" id="15_87n64"]
+[ext_resource type="Texture2D" uid="uid://hv5xcdp1pbdq" path="res://models/Gall_3-no-bg-preview (carve.photos).png" id="16_pi1wv"]
+[ext_resource type="Texture2D" uid="uid://cyki45xp2jpy7" path="res://models/Gall_4-no-bg-preview (carve.photos).png" id="17_pwvrm"]
+[ext_resource type="Texture2D" uid="uid://chdxsfeh8ni8v" path="res://models/Gall_5-no-bg-preview (carve.photos).png" id="18_243l5"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_0ktm7"]
 animations = [{
 "frames": [{
-"duration": 0.7,
-"texture": SubResource("AtlasTexture_jdsit")
+"duration": 1.0,
+"texture": ExtResource("3_x66bp")
 }, {
-"duration": 0.7,
-"texture": SubResource("AtlasTexture_8kcr1")
+"duration": 1.0,
+"texture": ExtResource("4_08imj")
 }, {
-"duration": 0.7,
-"texture": SubResource("AtlasTexture_cid4m")
+"duration": 1.0,
+"texture": ExtResource("5_ti15j")
 }, {
-"duration": 0.7,
-"texture": SubResource("AtlasTexture_3g6vl")
+"duration": 1.0,
+"texture": ExtResource("6_aarxj")
 }, {
-"duration": 0.7,
-"texture": SubResource("AtlasTexture_62ytg")
+"duration": 1.0,
+"texture": ExtResource("7_sujkf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_c1ysb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_4p3sk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_74p3j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_2hpuu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_36ljo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_v1yhm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_vcat3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_87n64")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_pi1wv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_pwvrm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_243l5")
 }],
 "loop": true,
 "name": &"default",
@@ -63,7 +87,7 @@ offset_bottom = 337.0
 script = ExtResource("2_eeh7h")
 
 [node name="MainCharacterAnimation" type="AnimatedSprite2D" parent="."]
-position = Vector2(160, 448.6)
+position = Vector2(179, 440)
 scale = Vector2(0.233839, 0.189171)
 sprite_frames = SubResource("SpriteFrames_0ktm7")
 
