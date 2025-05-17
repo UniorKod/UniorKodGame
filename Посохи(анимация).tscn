@@ -1,0 +1,84 @@
+[gd_scene load_steps=14 format=3 uid="uid://dqxadpfr5c0s8"]
+
+[ext_resource type="Texture2D" path="res://1.png" id="1_h7x6r"]
+[ext_resource type="Texture2D" path="res://11-no-bg-preview (carve.photos).png" id="2_mpthb"]
+[ext_resource type="Texture2D" path="res://gjcj[.png" id="3_w6kyx"]
+[ext_resource type="Texture2D" path="res://2.png" id="4_sccfe"]
+[ext_resource type="Texture2D" path="res://22.png" id="5_66nen"]
+[ext_resource type="Texture2D" path="res://посох-Picsart-BackgroundRemover.png" id="6_okdxs"]
+[ext_resource type="Texture2D" path="res://3.png" id="7_s6c47"]
+[ext_resource type="Texture2D" path="res://33.png" id="8_7sgub"]
+[ext_resource type="Texture2D" path="res://Посох21-Photoroom.png" id="9_j14xp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sxjxf"]
+atlas = ExtResource("2_mpthb")
+region = Rect2(0, 0, 451, 285)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_x0kb3"]
+animations = [{
+"frames": [{
+"duration": 3.0,
+"texture": ExtResource("1_h7x6r")
+}, {
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_sxjxf")
+}, {
+"duration": 1.75,
+"texture": ExtResource("3_w6kyx")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6a18p"]
+animations = [{
+"frames": [{
+"duration": 3.0,
+"texture": ExtResource("4_sccfe")
+}, {
+"duration": 3.0,
+"texture": ExtResource("5_66nen")
+}, {
+"duration": 1.75,
+"texture": ExtResource("6_okdxs")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6uey3"]
+animations = [{
+"frames": [{
+"duration": 3.0,
+"texture": ExtResource("7_s6c47")
+}, {
+"duration": 3.0,
+"texture": ExtResource("8_7sgub")
+}, {
+"duration": 1.75,
+"texture": ExtResource("9_j14xp")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Огн_Посох" type="AnimatedSprite2D" parent="."]
+position = Vector2(111, 200)
+sprite_frames = SubResource("SpriteFrames_x0kb3")
+frame_progress = 0.532407
+
+[node name="Лед_Посох" type="AnimatedSprite2D" parent="."]
+position = Vector2(521, 190)
+sprite_frames = SubResource("SpriteFrames_6a18p")
+frame_progress = 0.737273
+
+[node name="Лед_Посох_2" type="AnimatedSprite2D" parent="."]
+position = Vector2(912, 195)
+scale = Vector2(1.44949, 1.44988)
+sprite_frames = SubResource("SpriteFrames_6uey3")
+frame_progress = 0.595361
