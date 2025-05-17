@@ -9,6 +9,7 @@ var player: CharacterBody2D
 var speed = 100
 var fixed_y_position: float = 0.0
 var is_on_floor: bool = false
+var vrag_heave = 100.0
 
 
 func check_floor_status():
@@ -41,3 +42,10 @@ func _physics_process(delta):
 	#position.y = fixed_y_position
 	velocity.y = 0
 	move_and_slide()
+func take_damage(damage: int, direction: Vector2):
+	velocity = direction.normalized()
+	vrag_heave -= 0.1
+	$ProgressBar.value = vrag_heave
+	print("Здоровье врага: ", vrag_heave)
+	if vrag_heave <= 0:
+		queue_free()
