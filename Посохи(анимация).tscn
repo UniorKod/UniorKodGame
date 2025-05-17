@@ -1,30 +1,26 @@
-[gd_scene load_steps=14 format=3 uid="uid://dqxadpfr5c0s8"]
+[gd_scene load_steps=13 format=3 uid="uid://dqxadpfr5c0s8"]
 
-[ext_resource type="Texture2D" path="res://1.png" id="1_h7x6r"]
-[ext_resource type="Texture2D" path="res://11-no-bg-preview (carve.photos).png" id="2_mpthb"]
-[ext_resource type="Texture2D" path="res://gjcj[.png" id="3_w6kyx"]
-[ext_resource type="Texture2D" path="res://2.png" id="4_sccfe"]
-[ext_resource type="Texture2D" path="res://22.png" id="5_66nen"]
-[ext_resource type="Texture2D" path="res://посох-Picsart-BackgroundRemover.png" id="6_okdxs"]
-[ext_resource type="Texture2D" path="res://3.png" id="7_s6c47"]
-[ext_resource type="Texture2D" path="res://33.png" id="8_7sgub"]
-[ext_resource type="Texture2D" path="res://Посох21-Photoroom.png" id="9_j14xp"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_sxjxf"]
-atlas = ExtResource("2_mpthb")
-region = Rect2(0, 0, 451, 285)
+[ext_resource type="Texture2D" uid="uid://dreod1q8lejpu" path="res://models/1.png" id="1_f83qn"]
+[ext_resource type="Texture2D" uid="uid://beyv6cu8ndi8e" path="res://models/11-no-bg-preview (carve.photos) (1).png" id="2_cd0vl"]
+[ext_resource type="Texture2D" uid="uid://ckl3cmjn1v2ju" path="res://models/gjcj[.png" id="3_g3p0e"]
+[ext_resource type="Texture2D" uid="uid://dluos5gtcys4a" path="res://models/2.png" id="4_ypgmb"]
+[ext_resource type="Texture2D" uid="uid://e8un22oqjtcj" path="res://models/22.png" id="5_bm6xv"]
+[ext_resource type="Texture2D" uid="uid://byo141gf6npgg" path="res://models/посох-Picsart-BackgroundRemover.png" id="6_qcbtv"]
+[ext_resource type="Texture2D" uid="uid://dajcmwjvmjp80" path="res://models/3.png" id="7_g1fsr"]
+[ext_resource type="Texture2D" uid="uid://dhxes8b1mxdyh" path="res://models/33.png" id="8_qr7w4"]
+[ext_resource type="Texture2D" uid="uid://kxgxnlln56rg" path="res://models/Посох21-Photoroom.png" id="9_f0avc"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_x0kb3"]
 animations = [{
 "frames": [{
 "duration": 3.0,
-"texture": ExtResource("1_h7x6r")
+"texture": ExtResource("1_f83qn")
 }, {
 "duration": 3.0,
-"texture": SubResource("AtlasTexture_sxjxf")
+"texture": ExtResource("2_cd0vl")
 }, {
 "duration": 1.75,
-"texture": ExtResource("3_w6kyx")
+"texture": ExtResource("3_g3p0e")
 }],
 "loop": true,
 "name": &"default",
@@ -35,13 +31,13 @@ animations = [{
 animations = [{
 "frames": [{
 "duration": 3.0,
-"texture": ExtResource("4_sccfe")
+"texture": ExtResource("4_ypgmb")
 }, {
 "duration": 3.0,
-"texture": ExtResource("5_66nen")
+"texture": ExtResource("5_bm6xv")
 }, {
 "duration": 1.75,
-"texture": ExtResource("6_okdxs")
+"texture": ExtResource("6_qcbtv")
 }],
 "loop": true,
 "name": &"default",
@@ -52,13 +48,13 @@ animations = [{
 animations = [{
 "frames": [{
 "duration": 3.0,
-"texture": ExtResource("7_s6c47")
+"texture": ExtResource("7_g1fsr")
 }, {
 "duration": 3.0,
-"texture": ExtResource("8_7sgub")
+"texture": ExtResource("8_qr7w4")
 }, {
 "duration": 1.75,
-"texture": ExtResource("9_j14xp")
+"texture": ExtResource("9_f0avc")
 }],
 "loop": true,
 "name": &"default",
@@ -70,7 +66,7 @@ animations = [{
 [node name="Огн_Посох" type="AnimatedSprite2D" parent="."]
 position = Vector2(111, 200)
 sprite_frames = SubResource("SpriteFrames_x0kb3")
-frame_progress = 0.532407
+frame_progress = 0.429144
 
 [node name="Лед_Посох" type="AnimatedSprite2D" parent="."]
 position = Vector2(521, 190)
