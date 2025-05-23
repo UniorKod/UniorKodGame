@@ -80,19 +80,20 @@ position = Vector2(2, 4)
 script = ExtResource("1_ibcr3")
 
 [node name="ProgressBar" type="ProgressBar" parent="."]
-offset_left = 52.0
-offset_top = 310.0
-offset_right = 268.0
-offset_bottom = 337.0
+offset_left = 63.0
+offset_top = 301.0
+offset_right = 279.0
+offset_bottom = 328.0
 script = ExtResource("2_eeh7h")
+metadata/_edit_use_anchors_ = true
 
 [node name="MainCharacterAnimation" type="AnimatedSprite2D" parent="."]
-position = Vector2(179, 440)
+position = Vector2(190, 431)
 scale = Vector2(0.233839, 0.189171)
 sprite_frames = SubResource("SpriteFrames_0ktm7")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-position = Vector2(165, 459.6)
+position = Vector2(176, 450.6)
 polygon = PackedVector2Array(-3, -92, -7, -91, -12, -90, -20, -87, -26, -80, -29, -74, -29, -56, -52, -38, -55, 17, -53, 20, -49, 22, -45, 20, -42, 19, -32, -17, -29, -24, -29, 13, -28, 18, -38, 39, -26, 65, -24, 68, -21, 69, -17, 70, -14, 68, -12, 66, 7, 66, 8, 67, 11, 69, 16, 69, 20, 67, 21, 65, 34, 42, 22, 22, 22, -29, 31, 17, 33, 21, 39, 22, 44, 19, 45, 17, 42, -42, 22, -57, 22, -74, 18, -83, 13, -87, 4, -91)
 
 [node name="Camera2D" type="Camera2D" parent="."]

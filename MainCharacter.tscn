@@ -1,10 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://qjx2xfywft2a"]
+[gd_scene load_steps=8 format=3 uid="uid://qjx2xfywft2a"]
 
 [ext_resource type="Texture2D" uid="uid://b0ohsit1w2now" path="res://models/фонУровня.jpg" id="1_r7r43"]
-[ext_resource type="PackedScene" path="res://ГлавныйГерой.tscn" id="4_0ns6w"]
-[ext_resource type="PackedScene" path="res://Boss.tscn" id="8_5cufw"]
-[ext_resource type="PackedScene" path="res://enemy.tscn" id="9_g43o2"]
-[ext_resource type="PackedScene" path="res://1level.tscn" id="10_mcu4v"]
+[ext_resource type="PackedScene" uid="uid://bo3phhu3kmngv" path="res://ГлавныйГерой.tscn" id="4_0ns6w"]
+[ext_resource type="Script" path="res://Teleport.gd" id="6_x4xr6"]
+[ext_resource type="PackedScene" uid="uid://qu31bql6tcic" path="res://Boss.tscn" id="8_5cufw"]
+[ext_resource type="PackedScene" uid="uid://bfalt0rpg812b" path="res://enemy.tscn" id="9_g43o2"]
+[ext_resource type="PackedScene" uid="uid://ou2h3motnly5" path="res://1level.tscn" id="10_mcu4v"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wlh4k"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -18,7 +21,7 @@ position = Vector2(-32, 109)
 
 [node name="1Уровень" parent="." instance=ExtResource("10_mcu4v")]
 position = Vector2(10, -3814)
-scale = Vector2(8.17676, 7.6126)
+scale = Vector2(7.9977, 7.58587)
 
 [node name="Node2D" parent="." instance=ExtResource("8_5cufw")]
 position = Vector2(8640, -183)
@@ -26,3 +29,12 @@ scale = Vector2(2, 2.01218)
 
 [node name="Враг1" parent="." instance=ExtResource("9_g43o2")]
 position = Vector2(1208, 572)
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(-8559, 617)
+script = ExtResource("6_x4xr6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(9086, -62)
+scale = Vector2(13.4, 6.52)
+shape = SubResource("RectangleShape2D_wlh4k")
