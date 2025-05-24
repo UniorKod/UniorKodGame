@@ -24,22 +24,12 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("3_x66bp")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
 }, {
-"duration": 1.0,
-"texture": ExtResource("4_08imj")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_ti15j")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_aarxj")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_sujkf")
-}, {
-"duration": 1.0,
-"texture": ExtResource("8_c1ysb")
-}, {
+"frames": [{
 "duration": 1.0,
 "texture": ExtResource("9_4p3sk")
 }, {
@@ -54,7 +44,32 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("13_v1yhm")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 5.0
 }, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_08imj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ti15j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_aarxj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_sujkf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_c1ysb")
+}],
+"loop": true,
+"name": &"run",
+"speed": 5.0
+}, {
+"frames": [{
 "duration": 1.0,
 "texture": ExtResource("14_vcat3")
 }, {
@@ -71,7 +86,7 @@ animations = [{
 "texture": ExtResource("18_243l5")
 }],
 "loop": true,
-"name": &"default",
+"name": &"sword",
 "speed": 5.0
 }]
 
@@ -91,6 +106,7 @@ metadata/_edit_use_anchors_ = true
 position = Vector2(190, 431)
 scale = Vector2(0.233839, 0.189171)
 sprite_frames = SubResource("SpriteFrames_0ktm7")
+animation = &"idle"
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 position = Vector2(176, 450.6)
