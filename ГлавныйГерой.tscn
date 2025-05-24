@@ -92,7 +92,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2u5j7"]
-size = Vector2(220, 177)
+size = Vector2(137, 142)
 
 [node name="Главный" type="CharacterBody2D"]
 position = Vector2(2, 4)
@@ -113,7 +113,8 @@ sprite_frames = SubResource("SpriteFrames_0ktm7")
 animation = &"idle"
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-position = Vector2(176, 450.6)
+position = Vector2(172, 435)
+scale = Vector2(0.973678, 0.82603)
 polygon = PackedVector2Array(-3, -92, -7, -91, -12, -90, -20, -87, -26, -80, -29, -74, -29, -56, -52, -38, -55, 17, -53, 20, -49, 22, -45, 20, -42, 19, -32, -17, -29, -24, -29, 13, -28, 18, -38, 39, -26, 65, -24, 68, -21, 69, -17, 70, -14, 68, -12, 66, 7, 66, 8, 67, 11, 69, 16, 69, 20, 67, 21, 65, 34, 42, 22, 22, 22, -29, 31, 17, 33, 21, 39, 22, 44, 19, 45, 17, 42, -42, 22, -57, 22, -74, 18, -83, 13, -87, 4, -91)
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -124,7 +125,7 @@ position = Vector2(120, 354)
 script = ExtResource("19_1rivd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SwordHitbox"]
-position = Vector2(54, 78.5)
+position = Vector2(65.5, 74)
 shape = SubResource("RectangleShape2D_2u5j7")
 
 [node name="Timer" type="Timer" parent="."]
