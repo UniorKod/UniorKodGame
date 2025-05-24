@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://byc5n66y5seo0"]
+
+[ext_resource type="Texture2D" uid="uid://do4vb46g42sll" path="res://win.png" id="1_ol76a"]
+
+[sub_resource type="TileSet" id="TileSet_06nar"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Win" type="Sprite2D" parent="."]
+position = Vector2(549, 301)
+texture = ExtResource("1_ol76a")
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_06nar")
+format = 2
