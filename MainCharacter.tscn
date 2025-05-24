@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://b0ohsit1w2now" path="res://models/фонУровня.jpg" id="1_r7r43"]
 [ext_resource type="PackedScene" uid="uid://bo3phhu3kmngv" path="res://ГлавныйГерой.tscn" id="4_0ns6w"]
 [ext_resource type="Script" path="res://Teleport.gd" id="6_x4xr6"]
-[ext_resource type="PackedScene" path="res://Boss.tscn" id="8_5cufw"]
+[ext_resource type="PackedScene" uid="uid://qu31bql6tcic" path="res://Boss.tscn" id="8_5cufw"]
 [ext_resource type="PackedScene" uid="uid://bfalt0rpg812b" path="res://enemy.tscn" id="9_g43o2"]
 [ext_resource type="PackedScene" uid="uid://ou2h3motnly5" path="res://1level.tscn" id="10_mcu4v"]
 

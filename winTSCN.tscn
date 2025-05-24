@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://byc5n66y5seo0"]
+[gd_scene load_steps=10 format=3 uid="uid://byc5n66y5seo0"]
 
 [ext_resource type="Texture2D" uid="uid://d0vveqysxkata" path="res://1уровень/Grass_Tile_Flat.png" id="1_4sbuo"]
 [ext_resource type="Texture2D" uid="uid://do4vb46g42sll" path="res://win.png" id="1_ol76a"]
 [ext_resource type="Texture2D" uid="uid://cias23qa200cv" path="res://1уровень/Grass_Tile_lower.png" id="2_834on"]
+[ext_resource type="PackedScene" uid="uid://bo3phhu3kmngv" path="res://ГлавныйГерой.tscn" id="4_q6m6u"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xcaqx"]
 texture = ExtResource("1_4sbuo")
@@ -382,3 +383,6 @@ shape = SubResource("RectangleShape2D_i4ahc")
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(1459, 225)
 shape = SubResource("RectangleShape2D_i4ahc")
+
+[node name="Главный" parent="." instance=ExtResource("4_q6m6u")]
+position = Vector2(-37, 8)
