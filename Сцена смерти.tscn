@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://d1r23a0alp1sj"]
+
+[ext_resource type="Texture2D" uid="uid://v28u7esdr18o" path="res://fon.jpg" id="1_i0wn3"]
+[ext_resource type="Texture2D" uid="uid://bysuqviqqk55l" path="res://b567ae4522a811f0b00e12986bb2ed31.png" id="2_dw4l4"]
+[ext_resource type="Script" path="res://реген_.gd" id="3_tg8oa"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(577.5, 323.75)
+scale = Vector2(0.900781, 0.888509)
+texture = ExtResource("1_i0wn3")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(557, 256)
+scale = Vector2(0.634673, 0.576823)
+texture = ExtResource("2_dw4l4")
+
+[node name="Реген_" type="Button" parent="."]
+offset_left = 396.0
+offset_top = 472.0
+offset_right = 510.0
+offset_bottom = 531.0
+scale = Vector2(2.98947, 2.52913)
+text = "Рестарт"
+script = ExtResource("3_tg8oa")
+
+[connection signal="pressed" from="Реген_" to="Реген_" method="_on_pressed"]
