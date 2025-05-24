@@ -106,7 +106,7 @@ metadata/_edit_use_anchors_ = true
 position = Vector2(190, 431)
 scale = Vector2(0.233839, 0.189171)
 sprite_frames = SubResource("SpriteFrames_0ktm7")
-animation = &"idle"
+animation = &"jump"
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 position = Vector2(176, 450.6)

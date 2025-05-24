@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://qjx2xfywft2a"]
+[gd_scene load_steps=8 format=3 uid="uid://qjx2xfywft2a"]
 
 [ext_resource type="Texture2D" uid="uid://b0ohsit1w2now" path="res://models/фонУровня.jpg" id="1_r7r43"]
 [ext_resource type="PackedScene" uid="uid://bo3phhu3kmngv" path="res://ГлавныйГерой.tscn" id="4_0ns6w"]
+[ext_resource type="PackedScene" path="res://Мост(через реку).tscn" id="6_hikbt"]
 [ext_resource type="Script" path="res://Teleport.gd" id="6_x4xr6"]
 [ext_resource type="PackedScene" uid="uid://bfalt0rpg812b" path="res://enemy.tscn" id="9_g43o2"]
 [ext_resource type="PackedScene" uid="uid://ou2h3motnly5" path="res://1level.tscn" id="10_mcu4v"]
@@ -26,10 +27,14 @@ scale = Vector2(7.9977, 7.58587)
 position = Vector2(1208, 572)
 
 [node name="Area2D" type="Area2D" parent="."]
-position = Vector2(-20, -18)
+position = Vector2(645, 10)
 script = ExtResource("6_x4xr6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(9872, -67)
 scale = Vector2(13.4, 6.52)
 shape = SubResource("RectangleShape2D_wlh4k")
+
+[node name="Node2D" parent="." instance=ExtResource("6_hikbt")]
+position = Vector2(9239, -136)
+scale = Vector2(0.392481, 0.431187)
