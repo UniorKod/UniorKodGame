@@ -1,53 +1,59 @@
 extends CharacterBody2D
 
-# Здоровье врага
-var enemy_health: int = 100  # Переименовано из vrag_heave для читаемости
-var speed: float = 200
-var gravity: float = 980
-var floor_check_distance: float = 20
+@export var gravity: float = 9800.0
+@export var max_speed: float = 200.0
+@export var acceleration: float = 5.0
+@export var stop_distance: float = 20.0
+@export var floor_check_distance: float = 10.0
+var player: CharacterBody2D
+var speed = 100
+var fixed_y_position: float = 0.0
 var is_on_floor: bool = false
-var fixed_y_position: float
-var player: Node2D
+var vrag_heave = 100.0
+var can_take_damage = true
 
-# RayCast для проверки пола (создаётся один раз)
-var floor_ray: RayCast2D
+
+func check_floor_status():
+	# Создаем временный RayCast для проверки пола
+	var ray = RayCast2D.new()
+	ray.target_position = Vector2(0, floor_check_distance)
+	add_child(ray)
+	ray.force_raycast_update()
+	
+	is_on_floor = ray.is_colliding()
+	ray.queue_free()
 
 func _ready():
 	player = get_tree().get_first_node_in_group("Главный")
 	fixed_y_position = position.y
-	
-	# Инициализируем RayCast один раз
-	floor_ray = RayCast2D.new()
-	floor_ray.target_position = Vector2(0, floor_check_distance)
-	add_child(floor_ray)
 
 func _physics_process(delta):
 	if not player:
 		return
-	
 	check_floor_status()
-	
-	# Горизонтальное движение к игроку
-	var direction = (player.global_position - global_position).normalized()
-	velocity.x = direction.x * speed
-	
-	# Вертикальное движение (гравитация)
 	if not is_on_floor:
+
 		velocity.y += gravity * delta
-	else:
-		velocity.y = 0  # Останавливаем падение, если на полу
-	
 	move_and_slide()
+	check_floor_status()
+	var distance = global_position.distance_to(player.global_position)
+	var direction = (player.global_position - global_position).normalized()
+	velocity = direction * speed
+	
+	#position.y = fixed_y_position
+	velocity.y = 0
+	move_and_slide()
+func take_damage(damage: int, direction: Vector2):
+	if can_take_damage:
+		velocity = direction.normalized()
+		vrag_heave -= damage
+		$ProgressBar.value = vrag_heave
+		can_take_damage = false
+		$Timer.start(0.5)
+		print("Здоровье врага: ", vrag_heave)
+		if vrag_heave <= 0:
+			queue_free()
 
-# Проверка, стоит ли враг на поверхности
-func check_floor_status():
-	floor_ray.force_raycast_update()
-	is_on_floor = floor_ray.is_colliding()
 
-# Получение урона
-func take_damage(damage: int, knockback_direction: Vector2):
-	velocity = knockback_direction.normalized() * 500  # Отбрасывание при ударе
-	enemy_health -= damage
-	print("Здоровье врага: ", enemy_health)
-	if enemy_health <= 0:
-		queue_free()  # Уничтожаем врага при смерти
+func _on_timer_timeout() -> void:
+	can_take_damage = true

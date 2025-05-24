@@ -54,3 +54,7 @@ sprite_frames = SubResource("SpriteFrames_ldqlh")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CharacterBody2D"]
 polygon = PackedVector2Array(-13, -68, -11, -126, -3, -126, -3, -139, -1, -140, 1, -140, 3, -139, 4, -137, 4, -126, 20, -126, 20, -138, 23, -140, 26, -140, 28, -134, 28, -126, 43, -126, 54, -145, 52, -148, 54, -151, 57, -151, 59, -149, 58, -146, 55, -144, 51, -126, 87, -126, 88, 17, 92, 47, 92, 89, -9, 87, -27, 79, -27, 59, 3, 22, -10, 20, -35, -25, -84, -33, -84, -71)
+
+[node name="Timer" type="Timer" parent="CharacterBody2D"]
+
+[connection signal="timeout" from="CharacterBody2D/Timer" to="CharacterBody2D" method="_on_timer_timeout"]

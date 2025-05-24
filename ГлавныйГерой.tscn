@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://bo3phhu3kmngv"]
+[gd_scene load_steps=22 format=3 uid="uid://bo3phhu3kmngv"]
 
 [ext_resource type="Script" path="res://MainCharacterMovement.gd" id="1_ibcr3"]
 [ext_resource type="Script" path="res://progress_bar.gd" id="2_eeh7h"]
@@ -18,9 +18,30 @@
 [ext_resource type="Texture2D" uid="uid://hv5xcdp1pbdq" path="res://models/Gall_3-no-bg-preview (carve.photos).png" id="16_pi1wv"]
 [ext_resource type="Texture2D" uid="uid://cyki45xp2jpy7" path="res://models/Gall_4-no-bg-preview (carve.photos).png" id="17_pwvrm"]
 [ext_resource type="Texture2D" uid="uid://chdxsfeh8ni8v" path="res://models/Gall_5-no-bg-preview (carve.photos).png" id="18_243l5"]
+[ext_resource type="Script" path="res://area_2d.gd" id="19_1rivd"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_0ktm7"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_vcat3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_87n64")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_pi1wv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_pwvrm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_243l5")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("3_x66bp")
@@ -68,27 +89,10 @@ animations = [{
 "loop": true,
 "name": &"run",
 "speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("14_vcat3")
-}, {
-"duration": 1.0,
-"texture": ExtResource("15_87n64")
-}, {
-"duration": 1.0,
-"texture": ExtResource("16_pi1wv")
-}, {
-"duration": 1.0,
-"texture": ExtResource("17_pwvrm")
-}, {
-"duration": 1.0,
-"texture": ExtResource("18_243l5")
-}],
-"loop": true,
-"name": &"sword",
-"speed": 5.0
 }]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2u5j7"]
+size = Vector2(220, 177)
 
 [node name="Главный" type="CharacterBody2D"]
 position = Vector2(2, 4)
@@ -106,7 +110,7 @@ metadata/_edit_use_anchors_ = true
 position = Vector2(190, 431)
 scale = Vector2(0.233839, 0.189171)
 sprite_frames = SubResource("SpriteFrames_0ktm7")
-animation = &"jump"
+animation = &"idle"
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 position = Vector2(176, 450.6)
@@ -114,3 +118,19 @@ polygon = PackedVector2Array(-3, -92, -7, -91, -12, -90, -20, -87, -26, -80, -29
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(614, 391)
+
+[node name="SwordHitbox" type="Area2D" parent="."]
+position = Vector2(120, 354)
+script = ExtResource("19_1rivd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SwordHitbox"]
+position = Vector2(54, 78.5)
+shape = SubResource("RectangleShape2D_2u5j7")
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="SafetyTimer" type="Timer" parent="."]
+
+[connection signal="body_entered" from="SwordHitbox" to="SwordHitbox" method="_on_body_entered"]
+[connection signal="body_exited" from="SwordHitbox" to="SwordHitbox" method="_on_body_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

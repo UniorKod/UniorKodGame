@@ -30,7 +30,8 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Враг1" type="Node2D"]
+[node name="Враг1" type="Node2D" groups=["Главный"]]
+position = Vector2(-1, 0)
 
 [node name="Враг2" type="CharacterBody2D" parent="."]
 position = Vector2(1.00003, 1)
@@ -49,3 +50,14 @@ scale = Vector2(0.866707, 1.01817)
 sprite_frames = SubResource("SpriteFrames_g1h31")
 frame = 4
 frame_progress = 0.0316528
+
+[node name="ProgressBar" type="ProgressBar" parent="Враг2"]
+offset_left = -233.0
+offset_top = -321.0
+offset_right = 291.0
+offset_bottom = -208.0
+value = 100.0
+
+[node name="Timer" type="Timer" parent="Враг2"]
+
+[connection signal="timeout" from="Враг2/Timer" to="Враг2" method="_on_timer_timeout"]
