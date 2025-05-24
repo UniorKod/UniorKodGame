@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=3 uid="uid://ou2h3motnly5"]
+[gd_scene load_steps=58 format=3 uid="uid://ou2h3motnly5"]
 
 [ext_resource type="Texture2D" uid="uid://d0vveqysxkata" path="res://1уровень/Grass_Tile_Flat.png" id="1_0ioa5"]
 [ext_resource type="Texture2D" uid="uid://dwroug3j0rrs8" path="res://1уровень/Grass_Tile_Flat_r.png" id="2_363kw"]
@@ -13935,6 +13935,8 @@ size = Vector2(0.928871, 0.847841)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pog66"]
 size = Vector2(4.54545, 14.0206)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_27kbi"]
+
 [node name="1Уровень" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -14012,3 +14014,23 @@ shape = SubResource("RectangleShape2D_8nh0y")
 position = Vector2(1351, 416)
 scale = Vector2(1.76, 15.52)
 shape = SubResource("RectangleShape2D_pog66")
+
+[node name="StaticBody2D11" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D11"]
+position = Vector2(194, 555)
+shape = SubResource("RectangleShape2D_27kbi")
+
+[node name="StaticBody2D12" type="StaticBody2D" parent="."]
+position = Vector2(20, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D12"]
+position = Vector2(194, 555)
+shape = SubResource("RectangleShape2D_27kbi")
+
+[node name="StaticBody2D13" type="StaticBody2D" parent="."]
+position = Vector2(11, -21)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D13"]
+position = Vector2(194, 555)
+shape = SubResource("RectangleShape2D_27kbi")
